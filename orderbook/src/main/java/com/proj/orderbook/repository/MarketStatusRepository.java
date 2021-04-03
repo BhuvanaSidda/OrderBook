@@ -6,5 +6,7 @@ import org.springframework.stereotype.Repository;
 import com.proj.orderbook.entity.MarketStatus;
 
 @Repository
-public interface MarketStatusRepository extends JpaRepository<MarketStatus, String>{
+public interface MarketStatusRepository extends JpaRepository<MarketStatus, String> {
+
+	MarketStatus findByIdAndStatus(String string, String string2);
 }

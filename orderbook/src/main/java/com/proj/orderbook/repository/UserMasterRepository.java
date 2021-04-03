@@ -8,4 +8,6 @@ import com.proj.orderbook.entity.UserMaster;
 @Repository
 public interface UserMasterRepository extends JpaRepository<UserMaster, String> {
 
+	UserMaster findByUserIdAndUserType(String adminId, String string);
+
 }
