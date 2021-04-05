@@ -8,5 +8,5 @@ import com.proj.orderbook.entity.MarketStatus;
 @Repository
 public interface MarketStatusRepository extends JpaRepository<MarketStatus, String> {
 
-	MarketStatus findByIdAndStatus(String string, String string2);
+	MarketStatus findByUserIdAndMarketStatus(String string, String string2);
 }

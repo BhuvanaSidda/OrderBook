@@ -1,15 +1,20 @@
 package com.proj.orderbook.dto;
 
-import java.time.LocalDateTime;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 
 public class OrderDetailsDto {
 
+	@NotNull
+	@NotBlank(message = "Customer Id is mandatory")
+	@Size(min = 3, max = 100, message = "Customer Id characters should be in between 3 & 100")
 	private String customerId;
+	
 	private Integer stockId;
 	private Integer orderQuantity;
 	private String orderType;
 	private Double price;
-	private LocalDateTime orderDate;
 
 	public String getCustomerId() {
 		return customerId;
@@ -27,7 +32,6 @@ public class OrderDetailsDto {
 		this.stockId = stockId;
 	}
 
-	
 	public Integer getOrderQuantity() {
 		return orderQuantity;
 	}
@@ -50,14 +54,6 @@ public class OrderDetailsDto {
 
 	public void setPrice(Double price) {
 		this.price = price;
-	}
-
-	public LocalDateTime getOrderDate() {
-		return orderDate;
-	}
-
-	public void setOrderDate(LocalDateTime orderDate) {
-		this.orderDate = orderDate;
 	}
 
 }

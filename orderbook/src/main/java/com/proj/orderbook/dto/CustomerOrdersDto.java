@@ -1,21 +1,32 @@
 package com.proj.orderbook.dto;
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 
 public class CustomerOrdersDto {
 
-	private Integer customerId;
+	private String customerId;
+
 	private String customerName;
+
 	private Integer orderQuantity;
 	private Double price;
 	private String orderType;
-	private LocalDateTime orderDate;
+	private String orderStatus;
+	private LocalDate orderDate;
 
-	public Integer getCustomerId() {
+	public String getOrderStatus() {
+		return orderStatus;
+	}
+
+	public void setOrderStatus(String orderStatus) {
+		this.orderStatus = orderStatus;
+	}
+
+	public String getCustomerId() {
 		return customerId;
 	}
 
-	public void setCustomerId(Integer customerId) {
+	public void setCustomerId(String customerId) {
 		this.customerId = customerId;
 	}
 
@@ -51,11 +62,11 @@ public class CustomerOrdersDto {
 		this.orderType = orderType;
 	}
 
-	public LocalDateTime getOrderDate() {
+	public LocalDate getOrderDate() {
 		return orderDate;
 	}
 
-	public void setOrderDate(LocalDateTime orderDate) {
+	public void setOrderDate(LocalDate orderDate) {
 		this.orderDate = orderDate;
 	}
 

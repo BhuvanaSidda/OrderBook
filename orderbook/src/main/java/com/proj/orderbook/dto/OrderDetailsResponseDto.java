@@ -4,15 +4,15 @@ import java.util.List;
 
 public class OrderDetailsResponseDto {
 
-	private Integer customerId;
+	private String customerId;
 	private String customerName;
 	private List<StockDetailsDto> stockDetails;
 
-	public Integer getCustomerId() {
+	public String getCustomerId() {
 		return customerId;
 	}
 
-	public void setCustomerId(Integer customerId) {
+	public void setCustomerId(String customerId) {
 		this.customerId = customerId;
 	}
 

@@ -1,5 +1,6 @@
 package com.proj.orderbook.dto;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 public class StockDetailsDto {
@@ -10,7 +11,7 @@ public class StockDetailsDto {
 	private String orderType;
 	private Double price;
 	private String orderStatus;
-	private LocalDateTime orderDate;
+	private LocalDate orderDate;
 
 	public String getOrderStatus() {
 		return orderStatus;
@@ -60,11 +61,11 @@ public class StockDetailsDto {
 		this.price = price;
 	}
 
-	public LocalDateTime getOrderDate() {
+	public LocalDate getOrderDate() {
 		return orderDate;
 	}
 
-	public void setOrderDate(LocalDateTime orderDate) {
+	public void setOrderDate(LocalDate orderDate) {
 		this.orderDate = orderDate;
 	}
 

@@ -22,7 +22,15 @@ public class CustomerOrderDetails {
 	private Double price;
 	private String orderStatus;
 	private LocalDate orderDate;
+	private Integer executedQuantity;
 	
+	
+	public Integer getExecutedQuantity() {
+		return executedQuantity;
+	}
+	public void setExecutedQuantity(Integer executedQuantity) {
+		this.executedQuantity = executedQuantity;
+	}
 	public Integer getOrderId() {
 		return orderId;
 	}
